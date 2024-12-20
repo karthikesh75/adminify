@@ -1,13 +1,14 @@
 import React from "react";
 import "./LoginPage.css"; // Corrected path
+import { useNavigate } from "react-router-dom";
 import LoginImage from "../src/asstes/LoginImage.png";
 import Logo from "../src/asstes/Logo.png";
 import GoogleIcon from "@mui/icons-material/Google";
 import MicrosoftIcon from "@mui/icons-material/Microsoft";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
-
 const LoginPage = () => {
+   const navigate = useNavigate();
   return (
     <div className="container">
       {/* Left Section */}
@@ -25,7 +26,9 @@ const LoginPage = () => {
           <form>
             <input type="email" placeholder="Email address or mobile number" />
             <input type="password" placeholder="Enter your password" />
-            <button type="submit">Next</button>
+            <button type="submit" onClick={() => navigate("/HomePage")}>
+              Next
+            </button>
           </form>
           <p>Sign in using</p>
           <div className="social-icons">
