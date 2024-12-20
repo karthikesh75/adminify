@@ -4,6 +4,7 @@ import LoginPage from "./LoginPage";
 import AdminBookPage from "./AdminBookPage";
 import EmployeeBooksPage from "./EmployeeBooksPage";
 import HomePage from "./HomePage";
+import HistoryFile from "./HistoryFile";
 
 
 const RouterFile = () => {
@@ -17,6 +18,8 @@ const RouterFile = () => {
           <Route path="/employeebookspage" element={< EmployeeBooksPage/>} />
 
           <Route path="/HomePage" element={<HomePage />} />
+          <Route path="/HistoryPage" element={<HistoryFile />} />
+
           {/* <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} /> */}
         </Routes>
