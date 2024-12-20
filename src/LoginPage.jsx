@@ -25,14 +25,15 @@ const LoginPage = () => {
           </h2>
         </div>
         <div className="form">
-          <h3>Sign in to Adminify</h3>
+          <h3>Log in to Adminify</h3>
           <form>
             <input type="email" placeholder="Email address or mobile number" />
             <input type="password" placeholder="Enter your password" />
             <button type="submit" onClick={() => navigate("/HomePage")}>
               Next
             </button>
-          <p>Sign in using</p>
+
+          <p>Log in using</p>
           </form>
           <div className="social-icons">
             <GoogleIcon />
