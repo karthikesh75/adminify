@@ -4,7 +4,13 @@ import LoginPage from "./LoginPage";
 import HomePage from "./HomePage";
 import AdminBookPage from "./AdminBookPage";
 import EmployeeBooksPage from "./EmployeeBooksPage";
+
+
+import Inventory from "./Inventory";
+
+
 import HistoryFile from "./HistoryFile";
+
 
 const RouterFile = () => {
   return (
@@ -13,7 +19,15 @@ const RouterFile = () => {
         <Routes>
           <Route path="/" element={<LoginPage />} />
           <Route path="/adminbookpage" element={<AdminBookPage />} />
-          <Route path="/employeebookspage" element={< EmployeeBooksPage/>} 
+
+          <Route path="/inventory" element={<Inventory />} />
+          
+          <Route path="/employeebookspage" element={< EmployeeBooksPage/>} />
+         
+
+
+          <Route path="/employeebookspage" element={< EmployeeBooksPage/>} />
+
           <Route path="/HomePage" element={<HomePage />} />
           <Route path="/HistoryPage" element={<HistoryFile />} />
 
