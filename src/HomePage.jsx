@@ -11,6 +11,10 @@ import Assert from "../src/asstes/Assert.png";
 import Medicine from "../src/asstes/Medicine.png";
 import Library from "../src/asstes/Library.png";
 import Playarea from "../src/asstes/PlayArea.png";
+import AnnouncementImg from "../src/asstes/AnnouncementImg.png";
+// import GalleryImage from "../src/asstes/GalleryImage.png";
+// import CompanyImage from "../src/asstes/CompanyImage.png";
+// import EventImage from "../src/asstes/EventImage.png";
 // import { ClassNames } from "@emotion/react";
 // import { makeStyles } from "@mui/styles";
 import HomeIcon from "@mui/icons-material/Home";
@@ -22,77 +26,98 @@ import ContactMailIcon from "@mui/icons-material/ContactMail";
 
 const HomePage = () => {
   return (
-    <Box sx={{ display: "flex", height: "100vh" }}>
+    <Box
+      sx={{
+        display: "flex",
+        // height: "100vh",
+        position: "fixed",
+      }}
+    >
       {/* Sidebar */}
-      <Box
-        sx={{
-          width: 240,
+      <div className="sidebar">
+        <Box
+          sx={{
+            width: 230,
 
-          backgroundColor: "#2e3b4e",
-          color: "white",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
-          padding: 2,
-        }}
-      >
-        <Typography variant="h6" sx={{ mb: 3 }}>
-          ⚡ Adminify
-        </Typography>
-        {/* <List
-          sx={{ width: "100%", maxWidth: 360, }}
-          >
-          {[
-            "Home",
-            "History",
-            "My Approvals",
-            "Settings",
-            "info",
-            "Contact Us",
-          ]}
-        </List> */}
-
-        <ul
-          className="sidebar-menu"
-          style={{
-            listStyleType: "none",
-            padding: "0",
-            margin: "0",
+            backgroundColor: "#2e3b4e",
+            color: "white",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column",
+            gap: 32,
+            padding: 2,
           }}
         >
-          {[
-            { icon: <HomeIcon />, text: "Home" },
-            { icon: <HistoryIcon />, text: "History" },
-            { icon: <ApprovalIcon />, text: "My Approvals" },
-            { icon: <SettingsIcon />, text: "Settings" },
-            { icon: <InfoIcon />, text: "Info" },
-            { icon: <ContactMailIcon />, text: "Contact Us" },
-          ].map((item, index) => (
-            <li
-              key={index}
-              style={{
-                padding: "12px 0",
-                cursor: "pointer",
-                fontSize: "16px",
-                listStyle: "none",
-                // borderBottom: index !== 5 ? "1px solid #444" : "none",
-              }}
-            >
-              {item.icon}
-              <span style={{ marginLeft: "8px" }}>{item.text}</span>{" "}
-              {/* Adds space between icon and text */}
-            </li>
-          ))}
-        </ul>
-      </Box>
+          <Typography className="AdminifyBar" variant="h6" sx={{ mb: 3 }}>
+            ⚡ Adminify
+          </Typography>
+          <ul
+            className="sidebar-menu"
+            style={{
+              listStyleType: "none",
+              padding: "0",
+              margin: "0",
+            }}
+          >
+            {[
+              { icon: <HomeIcon />, text: "Home" },
+              { icon: <HistoryIcon />, text: "History" },
+              { icon: <ApprovalIcon />, text: "My Approvals" },
+              { icon: <SettingsIcon />, text: "Settings" },
+              { icon: <InfoIcon />, text: "Info" },
+              { icon: <ContactMailIcon />, text: "Contact Us" },
+            ].map((item, index) => (
+              <li
+                key={index}
+                style={{
+                  padding: "12px 0",
+                  cursor: "pointer",
+                  fontSize: "15px",
+                  listStyle: "none",
+                  position: "relative",
+                  bottom: 150,
+
+                  // borderBottom: index !== 5 ? "1px solid #444" : "none",
+                }}
+              >
+                {item.icon}
+                <span style={{ marginLeft: "10px" }}>{item.text}</span>{" "}
+                {/* Adds space between icon and text */}
+              </li>
+            ))}
+          </ul>
+          <Typography variant="h6" sx={{ mb: 3 }}>
+            Admin Dashboard
+          </Typography>
+        </Box>
+      </div>
 
       {/* Main Content */}
+
+
+
       <Box sx={{ flex: 1, padding: 3 }}>
-        {/* Welcome Banner */}
-        <Typography variant="h5" sx={{ mt: 3 }}>
-          Welcome back Mohanraj
-        </Typography>
+          {/* Welcome Banner */}
+          <div className="welcome-banner">
+            <Typography
+              // backgroundColor="#e0e0e0"
+              color="white"
+              padding={2}
+              variant="h5"
+              sx={{ mt: 3 }}
+            >
+              WELCOME BACK MOHANRAJ
+            </Typography>
+          </div>
+        <div className="AnnouncementCard">
+          <Card sx={{ maxWidth: 400 }}>
+            <CardMedia
+              sx={{ height: 140 }}
+              image={AnnouncementImg}
+              title="Gallery"
+            />
+          </Card>
         <Box
           sx={{
             backgroundColor: "#e0e0e0",
@@ -100,15 +125,58 @@ const HomePage = () => {
             mt: 2,
             borderRadius: 1,
           }}
-        ></Box>
+          ></Box>
+          </div>
+        {/* <div
+          className="card-container"
+          style={{
+            display: "flex",
+            gap: "16px", // Adds spacing between cards
+            padding: "16px", // Adds padding around the container
+          }}
+        >
+          <Card sx={{ maxWidth: 400 }}>
+            <CardMedia
+              sx={{ height: 140 }}
+              image={GalleryImage}
+              title="Gallery"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Gallery
+              </Typography>
+            </CardContent>
+          </Card>
 
+          <Card sx={{ maxWidth: 345 }}>
+            <CardMedia
+              sx={{ height: 140 }}
+              image={CompanyImage}
+              title="Company Service"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Company Service
+              </Typography>
+            </CardContent>
+          </Card>
+
+          <Card sx={{ maxWidth: 345 }}>
+            <CardMedia sx={{ height: 140 }} image={EventImage} title="Event" />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Event
+              </Typography>
+            </CardContent>
+          </Card>
+        </div> */}
         {/* Quick Actions */}
 
         <Typography variant="h6" sx={{ mt: 4 }}>
           Quick Actions
         </Typography>
 
-        <Box  
+        <Box
           className="ImageCards"
           sx={{
             display: "grid",
@@ -118,7 +186,7 @@ const HomePage = () => {
               md: "repeat(3, 1fr)",
               lg: "repeat(5, 1fr)",
             },
-            gap: 3, // Spacing between items
+            // gap: 1, // Spacing between items
             mt: 1,
             // height: 30,
           }}
@@ -133,15 +201,22 @@ const HomePage = () => {
             { title: "Library", image: Library },
             { title: "Play Area", image: Playarea },
           ].map((item) => (
-            <Card key={item.title} sx={{ maxWidth: "100%" }}>
+            <Card key={item.title} sx={{ maxWidth: "70%", height: "90%" }}>
               <CardMedia
                 component="img"
-                height="250"
+                height="200"
                 image={item.image}
                 alt={item.title}
               />
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography
+                  fontSize={15}
+                  paddingBottom={2}
+                  fontWeight={"bold"}
+                  gutterBottom
+                  variant="h6"
+                  component="div"
+                >
                   {item.title}
                 </Typography>
               </CardContent>

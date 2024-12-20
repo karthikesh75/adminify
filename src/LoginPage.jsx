@@ -17,9 +17,12 @@ const LoginPage = () => {
       </div>
       {/* Right Section */}
       <div className="right-section">
-        <div className="logo">
-          <img src={Logo} alt="Adminify Logo" />
-          <h2>Adminify</h2>
+        <div className="Login-logo">
+          {/* <img src={Logo} alt="Adminify Logo" /> */}
+          <h2>
+            {" "}
+            ⚡ <span className="AdminifyText">ADMINI</span>fy
+          </h2>
         </div>
         <div className="form">
           <h3>Sign in to Adminify</h3>
@@ -29,8 +32,8 @@ const LoginPage = () => {
             <button type="submit" onClick={() => navigate("/HomePage")}>
               Next
             </button>
-          </form>
           <p>Sign in using</p>
+          </form>
           <div className="social-icons">
             <GoogleIcon />
             <MicrosoftIcon />

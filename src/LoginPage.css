@@ -16,7 +16,7 @@
 .left-image {
   width: 100%;
   height: 100vh;
-   /* position: fixed; */
+  /* position: fixed; */
 }
 
 .right-section {
@@ -24,11 +24,32 @@
   background-color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 2rem;
 }
-
+.form {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  bottom: 300px;
+}
+.form h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  margin-right: 255px;
+}
+form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+/* span.AdminifyText {
+  color: #065ad8;
+} */
 .logo {
   display: flex;
   align-items: center;
@@ -47,7 +68,7 @@
 }
 
 .form h3 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.6rem;
   font-size: 1.5rem;
 }
 
@@ -89,4 +110,13 @@ form button:hover {
 .form p {
   font-size: 0.9rem;
   margin-top: 1rem;
+}
+.social-icons {
+  position: relative;
+  top: 30px;
+}
+
+.Login-logo h2 {
+  margin-right: 25px;
+  font-size: 60px;
 }
