@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.AdminifyBar {
+  background-color: whitesmoke;
+  padding: 10px;
+  color: black;
+  border-radius: 8px;
+}
+.card-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
+
+.welcome-banner {
+  background: rgb(240, 249, 249);
+  background: linear-gradient(
+    300deg,
+    rgba(240, 249, 249, 1) 0%,
+    rgba(23, 22, 23, 1) 94%
+    );
+  }
+  .AnnouncementCard{
+  display: flex;
+  justify-content: space-between;
+}
+.Login-logo{
+
+  font-size: 20px;
+}
+.Login-logo h2{
+  margin: 0;
+  font-size: 60px;
+  top:200px;
+}
