@@ -12,11 +12,6 @@ import Medicine from "../src/asstes/Medicine.png";
 import Library from "../src/asstes/Library.png";
 import Playarea from "../src/asstes/PlayArea.png";
 import AnnouncementImg from "../src/asstes/AnnouncementImg.png";
-// import GalleryImage from "../src/asstes/GalleryImage.png";
-// import CompanyImage from "../src/asstes/CompanyImage.png";
-// import EventImage from "../src/asstes/EventImage.png";
-// import { ClassNames } from "@emotion/react";
-// import { makeStyles } from "@mui/styles";
 import HomeIcon from "@mui/icons-material/Home";
 import HistoryIcon from "@mui/icons-material/History";
 import ApprovalIcon from "@mui/icons-material/CheckCircle";
@@ -29,7 +24,6 @@ const HomePage = () => {
     <Box
       sx={{
         display: "flex",
-        // height: "100vh",
         position: "fixed",
       }}
     >
@@ -77,8 +71,6 @@ const HomePage = () => {
                   listStyle: "none",
                   position: "relative",
                   bottom: 150,
-
-                  // borderBottom: index !== 5 ? "1px solid #444" : "none",
                 }}
               >
                 {item.icon}
@@ -95,21 +87,13 @@ const HomePage = () => {
 
       {/* Main Content */}
 
-
-
       <Box sx={{ flex: 1, padding: 3 }}>
-          {/* Welcome Banner */}
-          <div className="welcome-banner">
-            <Typography
-              // backgroundColor="#e0e0e0"
-              color="white"
-              padding={2}
-              variant="h5"
-              sx={{ mt: 3 }}
-            >
-              WELCOME BACK MOHANRAJ
-            </Typography>
-          </div>
+        {/* Welcome Banner */}
+        <div className="welcome-banner">
+          <Typography color="white" padding={2} variant="h5" sx={{ mt: 3 }}>
+            WELCOME BACK MOHANRAJ
+          </Typography>
+        </div>
         <div className="AnnouncementCard">
           <Card sx={{ maxWidth: 400 }}>
             <CardMedia
@@ -118,59 +102,15 @@ const HomePage = () => {
               title="Gallery"
             />
           </Card>
-        <Box
-          sx={{
-            backgroundColor: "#e0e0e0",
-            height: 150,
-            mt: 2,
-            borderRadius: 1,
-          }}
+          <Box
+            sx={{
+              backgroundColor: "#e0e0e0",
+              height: 150,
+              mt: 2,
+              borderRadius: 1,
+            }}
           ></Box>
-          </div>
-        {/* <div
-          className="card-container"
-          style={{
-            display: "flex",
-            gap: "16px", // Adds spacing between cards
-            padding: "16px", // Adds padding around the container
-          }}
-        >
-          <Card sx={{ maxWidth: 400 }}>
-            <CardMedia
-              sx={{ height: 140 }}
-              image={GalleryImage}
-              title="Gallery"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Gallery
-              </Typography>
-            </CardContent>
-          </Card>
-
-          <Card sx={{ maxWidth: 345 }}>
-            <CardMedia
-              sx={{ height: 140 }}
-              image={CompanyImage}
-              title="Company Service"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Company Service
-              </Typography>
-            </CardContent>
-          </Card>
-
-          <Card sx={{ maxWidth: 345 }}>
-            <CardMedia sx={{ height: 140 }} image={EventImage} title="Event" />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Event
-              </Typography>
-            </CardContent>
-          </Card>
-        </div> */}
-        {/* Quick Actions */}
+        </div>
 
         <Typography variant="h6" sx={{ mt: 4 }}>
           Quick Actions
@@ -186,9 +126,8 @@ const HomePage = () => {
               md: "repeat(3, 1fr)",
               lg: "repeat(5, 1fr)",
             },
-            // gap: 1, // Spacing between items
+
             mt: 1,
-            // height: 30,
           }}
         >
           {[
