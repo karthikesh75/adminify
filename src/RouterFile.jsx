@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LoginPage from "./LoginPage";
+import AdminBookPage from "./AdminBookPage";
+import EmployeeBooksPage from "./EmployeeBooksPage";
 
 const RouterFile = () => {
   return (
@@ -8,6 +10,8 @@ const RouterFile = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LoginPage />} />
+          <Route path="/adminbookpage" element={<AdminBookPage />} />
+          <Route path="/employeebookspage" element={< EmployeeBooksPage/>} />
           {/* <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} /> */}
         </Routes>
